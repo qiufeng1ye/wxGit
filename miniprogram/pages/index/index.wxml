@@ -1,0 +1,25 @@
+<view>
+
+
+  <view class='nav'></view>
+  <view class="item"><text>{{solarTerm[n]}}</text></view>
+  
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="400" height="150"/>
+    </swiper-item>
+  </block>
+  </swiper>
+
+  <view class='wrapper'>
+    <text>{{hou1}}</text>
+    <text>{{hou2}}</text>
+    <text>{{hou3}}</text>
+  </view>
+
+  <view class='wrapper'>
+    <button type="primary" bindtap="next"> 下一个 </button>
+    <button type="default" bindtap="previous"> 上一个 </button>
+  </view>
+</view>
